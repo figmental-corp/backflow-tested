@@ -11,11 +11,14 @@ datasource db {
     directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model Test {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  @@map("backflow_test")
+model Post {
+    id        Int      @id @default(autoincrement())
+    name      String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@index([name])
+    @@map("backflow_post")
 }
 
 // Add other models as needed, always using the @@map attribute with the "backflow_" prefix
