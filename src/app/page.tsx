@@ -32,7 +32,7 @@ export default function Home() {
               </Button>
             </SignedIn>
             <Button variant="outline" asChild>
-              <Link href="#learn-more">Learn More</Link>
+              <Link href="/public/features">Learn More</Link>
             </Button>
           </div>
         </div>
