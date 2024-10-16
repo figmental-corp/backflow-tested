@@ -8,6 +8,7 @@ import {
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
+import { Toaster } from "@/components/ui/sonner";
 import { TRPCReactProvider } from "@/trpc/react";
 import { Button } from "@/components/ui/button";
 import { CloudUpload } from "lucide-react";
@@ -62,6 +63,7 @@ export default function RootLayout({
             </nav>
           </header>
           <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Toaster />
           <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
             <p className="text-xs text-gray-500 dark:text-gray-400">
               © 2024 BackflowTested. All rights reserved.
