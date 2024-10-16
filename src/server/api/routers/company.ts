@@ -1,7 +1,5 @@
 "server-only";
 
-import { z } from "zod";
-
 import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
 import { companySchema } from "@/schemas/companySchema";
 
