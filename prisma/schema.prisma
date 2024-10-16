@@ -21,4 +21,20 @@ model Post {
     @@map("backflow_post")
 }
 
+model Company {
+  id            String   @id @default(cuid())
+  name          String
+  email         String   @unique
+  phone         String
+  addressLine1  String
+  addressLine2  String
+  city          String
+  state         String
+  zip           String
+  licenseNumber String   @unique
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  @@map("backflow_company")
+}
+
 // Add other models as needed, always using the @@map attribute with the "backflow_" prefix
